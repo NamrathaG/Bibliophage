@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <style>
+ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #43617B;
+    
+}
+
+.liclass {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:  #adbfd2;
+}
+
+
+
+
+        .auto-style1 {
+            width: 57px;
+            height: 26px;
+            position: absolute;
+            left: 1258px;
+            top: 15px;
+            z-index: 1;
+        }
+
+
+
+
+    </style>
+
+    <title></title>
+     <!--link href="dnlh2.css" rel="stylesheet" type="text/css" /-->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+     <form id="form1" runat="server">
+  
+          <nav id="nav">
+	 <ul >
+        
+        <li class="liclass"><asp:Image ID="Image1" runat="server" height="50px" Width="50px" ImageUrl="~/logo4.jpg" /></li>  
+         <li class="liclass" runat="server"><a href="blank.aspx">Home</a></li>
+         
+         <li class="liclass" id="cart" runat="server" visible="false" ><a href="cart.aspx">Cart</a></li>
+         <li class="liclass" id="search" runat="server" visible="false"><a href="cusSearch.aspx">Search</a></li>
+         <li class="liclass" id="addBook" runat="server" visible="false"><a href="addbook.aspx">Add books</a></li>
+         <li class="liclass" id="updateStock" runat="server" visible="false"><a href="updateStock.aspx">Update Stock</a></li>
+         <li class="liclass" id="sales" runat="server" visible="false"><a href="own_sales.aspx">Sales</a></li>
+         <li class="liclass" id="threshold" runat="server" visible="false"><a href="own_threshold.aspx">Books below threshold</a></li>
+         <li class="liclass" id="procure" runat="server" visible="false"><a href="procure.aspx">Procure</a></li>
+        
+         <li class="liclass" style="float:right; z-index: 1;"  runat="server"><asp:Button runat="server" OnClick="logoutbtn_Click" Text="Logout" ForeColor="White" BackColor="#43617B" CssClass="auto-style1" /></li>
+     </ul>
+     </nav>
+
+    
+       
+         
+           
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+          
+
+        </asp:ContentPlaceHolder>
+   
+          </form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+        <style>
+ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #43617B;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:  #adbfd2;
+}
+
+Panel{
+    background-repeat:no-repeat;
+
+}
+</style>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav id="nav">
+    <ul>
+        <li><asp:Image ID="Image1" runat="server" height="60px" Width="60px" ImageUrl="~/logo4.jpg" /></li>  
+         <li >
+             <asp:Label ID="Label1" runat="server" Text="Book Palace" Font-Size="40" Font-Bold="true"  ForeColor="White" Font-Names="Edwardian Script ITC" style="z-index: 1; left: 60px; top: 8px; position: absolute; height: 58px; width: 332px"></asp:Label>
+            
+     </li>
+
+
+    </ul>
+   </nav>
+
+    <form id="form1" runat="server">
+    <div>
+    </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    <asp:Panel ID="Panel1" runat="server" BackImageUrl="logo4.jpg" style="z-index: 1; left: 789px; top: 134px; position: absolute; height: 454px; width: 476px"></asp:Panel>
+    
+    </form>
+</body>
+</html>
